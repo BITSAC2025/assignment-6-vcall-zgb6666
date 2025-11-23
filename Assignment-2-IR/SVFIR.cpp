@@ -39,6 +39,13 @@ int main(int argc, char** argv)
     //@{
 
     //@}
+    auto pag = builder.build();
+    auto cg = pag->getCallGraph();
+    auto icfg = pag->getICFG();
+
+    pag->dump();
+    cg->dump();
+    icfg->dump();
 
     return 0;
 }
